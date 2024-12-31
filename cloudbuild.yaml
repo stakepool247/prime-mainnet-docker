@@ -14,4 +14,10 @@ steps:
       - 'us-central1-docker.pkg.dev/apex-fusion-mainnet-001/apex-mainnet/cardano-node:9.2.1'
 images:
   - 'us-central1-docker.pkg.dev/apex-fusion-mainnet-001/apex-mainnet/cardano-node:9.2.1'
-  
+
+# This is the key part: specifying a custom service account
+# and setting logging to CLOUD_LOGGING_ONLY so no logs bucket is needed.
+serviceAccount: projects/apex-fusion-mainnet-001/serviceAccounts/my-cloud-build@apex-fusion-mainnet-001.iam.gserviceaccount.com
+
+options:
+  logging: CLOUD_LOGGING_ONLY
