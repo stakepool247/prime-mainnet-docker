@@ -2,8 +2,10 @@
   # running docker-compose
   - name: 'docker/compose:1.29.2'
     args: ['up', '-d']
+ serviceAccount: projects/apex-fusion-mainnet-001/serviceAccounts/my-cloud-build@apex-fusion-mainnet-001.iam.gserviceaccount.com
+ options:
+    logging: CLOUD_LOGGING_ONLY
 
-    
 # steps:
 #   # Build using your Dockerfile in the current directory
 #   - name: 'gcr.io/cloud-builders/docker'
