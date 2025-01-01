@@ -43,5 +43,6 @@ services:
 
 volumes:
   # required for: prime-relay
-  # node-ipc:
+  node-ipc:
   node-db:
+# sudo journalctl -u konlet-startup
