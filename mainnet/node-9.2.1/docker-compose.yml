@@ -26,7 +26,7 @@ services:
       # use either docker volume (see volumes below) or local host folder if interracting from host over ipc
       # change here affects - db-sync, ogmios
       # - node-ipc:/ipc
-      - ./node-ipc:/ipc
+      #- ./node-ipc:/ipc
     restart: on-failure
     healthcheck:
       # Ping the EKG port to see if it responds.
@@ -43,6 +43,6 @@ services:
 
 volumes:
   # required for: prime-relay
-  node-ipc:
+  #node-ipc:
   node-db:
 # sudo journalctl -u konlet-startup

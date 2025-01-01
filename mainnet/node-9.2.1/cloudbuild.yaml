@@ -1,10 +1,15 @@
- steps:
-  # running docker-compose
+steps:
   - name: 'docker/compose:1.29.2'
-    args: ['up', '-d']
- serviceAccount: projects/apex-fusion-mainnet-001/serviceAccounts/my-cloud-build@apex-fusion-mainnet-001.iam.gserviceaccount.com
- options:
-    logging: CLOUD_LOGGING_ONLY
+    args:
+      - up
+      - '-d'
+    dir: mainnet/node-9.2.1
+options:
+  logging: CLOUD_LOGGING_ONLY
+serviceAccount: >-
+  projects/apex-fusion-mainnet-001/serviceAccounts/my-cloud-build@apex-fusion-mainnet-001.iam.gserviceaccount.com
+
+
 
 # steps:
 #   # Build using your Dockerfile in the current directory
